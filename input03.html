@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+    #container{
+        width: 600px;
+        margin: 10px auto;
+    }
+    ul,li{
+        list-style: none;
+        margin: 2px 10px;
+        /*2px은 위-아래. 10px은 좌-우 */
+    }
+    level{
+        display: inline-block;
+        width: 100px;
+        font-size: 14px;
+    }
+    #buttons{
+        text-align: center;
+
+    }
+    .sbtn{
+        width: 150px; height: 50px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 5px 2px auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>회원가입을 환영합니다</h1>
+        <form action="register.php" method="post">
+            <fieldset>
+                <legend>사용자 정보</legend>
+                <!--인풋들-->
+                <ul>
+                    <li>
+                        <level>아이디</level>
+                        <input type="autofocus placeholder="4자 ~ 10자 사이,공백없이 required>
+                    </li>
+                    <li>
+                        <level>이메일</level>
+                        <input type="email" id="uemail" required>
+                    </li>
+                    <li>
+                        <level>비밀번호</level>
+                        <input type="password" id="pwd1" placeholder="문자와 숫자,특수 기호" required>
+                    </li>
+                    <li>
+                        <level>비밀번호 확인</level>
+                        <input type="password" id="pwd1" required>
+                    </li>
+                    <li>
+                        <level>가입경로</level>
+                        <select>
+                            <option value="blog">블로그</option>
+                            <option value="search">검색</option>
+                            <option value="sns">소셜</option>
+                            <option value="etc">기타</option>
+                        </select>
+                    </li>
+                    <li>
+                        <level>메모</level>
+                        <textarea cols="40" rows="4" placeholder="남길 글이 있다면 여기에"></textarea>
+                    </li>
+                </ul>
+            
+            </fieldset>
+            <fieldset>
+                
+                <legend>이벤트와 새로운 소식</legend>
+                <!--라디오버튼-->
+                <ul>
+                    <li>
+                        <label><input type="radio" value="s_3">메일 수신</label>
+                        <label><input type="radio" value="s_5">메일 수신 안함</label>
+
+                    </li>
+                    
+                </ul>
+            
+            </fieldset>
+
+        <div id="buttons">
+            <input type="submit" value="가입하기" class="sbtn">
+            <input type="submit" value="취소하기" class="sbtn">
+        </div>
+        </form>
+    
+    </div>
+
+</body>
+</html>
