@@ -1,0 +1,88 @@
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css);
+div{
+    width: 500px;
+    height: 200px;
+    /*위아래20px 여백, 좌우가 auto로 주면 같아져서 중앙으로 배치됨 */
+    margin: 20px auto;
+}
+/*동시에 여러 요소*/
+span,li{
+
+    font-size: 14pt;
+}
+/*태그와 클래스를 동시에 만족, span태그이기도 하고 클래스이름도 맞아야 한다*/
+/*띄어쓰기 하면 안됨*/
+span.Listtitle{
+    font-weight: 500;
+    font-size: 20pt;
+}
+/*자식 요소 div> 클래스 이름, 또는 요소도 가능*/
+div > .titles{
+    font-weight: 500;
+    font-size: 17pt;
+}
+/*후손 요소 띄어쓰기 */
+div > span{
+    color: white;
+}
+/* 인접형제 선택자 */
+.bold + li{
+    color: white;
+    font-weight: 600;
+}
+/* 일반형제 선택자 */
+.mostbold ~ li{
+    color: white;
+    font-weight: 600;
+}
+
+/*첫번째DIV*/
+#fruit{
+    background-color: red;
+}
+/* */
+/*두번째DIV*/
+#sport{
+    background-color: blue;
+}
+#sport:before{
+    content: "여러분이 좋아하는";
+    color: white;
+}
+#sport:after{
+    content: "이군요";
+    color: white;
+}
+/*세번째DIV*/
+#chinese{
+    background-color: green;
+}
+a{
+color: black;
+font-weight: 600;
+text-align: center;
+}
+a:hover{
+color: red;
+}
+a:active{
+    color: green;
+    text-emphasis: none;
+}
+input:focus{
+    background-color: yellow;
+}
+/*ul li 리스트가 만들어지고 여러중에 하나를 선택해야  */
+#chinese > ul li:nth-child(2n){
+background-color: yellowgreen;
+}
+#chinese:not(span){
+    font-size: 22px;
+}
+/* input 속성선택 */
+[disabled]{
+    background-color: black;
+}
+[type="password"]{
+    background-color: chartreuse;
+}
