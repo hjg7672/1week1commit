@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/main.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <!--defer는 페이지를 읽고 가장 나중에 읽어주는것-->
+    <title>Document</title>
+</head>
+<body>
+    <!--이벤트 작동-->
+    <button class="over" id="open">상세보기</button>
+    <div class="detail" id="desc">
+        <p>보조설명</p>
+        <button>닫기</button>
+    </div>
+    <script>
+        let bitnView = document.querySelector('#open');
+        let showCont = document.querySelector('#desc');
+        let btnHide = document.querySelector('#close');
+        bitnView.style.display = "none";
+        // //querySelector는 화면의 클래스, 아이디, 요소(html) 처음발견한 것을 찾음
+        // //getElementById 등 값을 불러오지못하고 html요소만 불러온다.
+        
+        // function showDetail(){
+        //     showCont.style.display = "block";
+        //     bitnView.style.display = "none";
+        // }
+        // //되돌아가는 기능 - 어포던스의 기본.
+        // function hideDetail(){
+        //     showCont.style.display = "none";
+        //     bitnView.style.display = "block";
+        // }
+        btnView.addEventListener('click',function(){
+            showCont.style.display = "block";
+            bitnView.style.display = "none";
+
+        });
+        btnHide.addEventListener('click',function(){
+            showCont.style.display = "none";
+            bitnView.style.display = "block";
+
+        });
+    </script>
+</body>
+</html>
